@@ -19,3 +19,45 @@ npm start
 The Application Runs on localhost:8000
 
 
+End Point V1:
+
+Post: http://localhost:8000/api/v1/parse
+
+Input:
+
+{
+    "data":"JOHN0000MICHAEL0009994567"
+}
+
+Output:
+
+{
+    "statusCode": 200,
+    "data": {
+        "firstName": "JOHN0000",
+        "lastName": "MICHAEL000",
+        "clientId": "9994567"
+    }
+}
+
+End Point V2:
+
+Post: http://localhost:8000/api/v2/parse
+
+Input:
+
+{
+    "data":"JOHN0000MICHAEL0009994567"
+}
+
+Output:
+
+{
+    "statusCode": 200,
+    "data": {
+        "firstName": "JOHN",
+        "lastName": "MICHAEL",
+        "clientId": "999-4567"
+    }
+}
+
